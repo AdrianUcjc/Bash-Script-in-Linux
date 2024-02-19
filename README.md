@@ -4,4 +4,4 @@ El objetivo será crear un script compuesto por diferentes funciones, instruccio
 Este script, hace uso de un menú con el que podremos elegir entre varias opciones.
 Podremos crear o eliminar directorios y ficheros al giual que salir del script.
 
-Dicho menú, se realiza medainde unas cláusulas if, y trabajaremos con tres parámetros, los cuales serán variables de entrada de script.
+Dicho menú, se realiza mediante unas cláusulas if, y trabajaremos con tres parámetros, los cuales serán variables de entrada de script.
