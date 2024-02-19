@@ -1,0 +1,45 @@
+#!/bin/bash
+
+echo ""
+echo "_______________________________MENU_____________________________"
+echo ""
+echo "________________opc.1 --> Crear un directorio___________________"
+echo "________________opc.2 --> Crear un fichero______________________"
+echo "________________opc.3 --> Borrar un fichero_____________________"
+echo "________________opc.4 --> Borrar un directorio__________________"
+echo ""
+echo "___________________Salir --> Salir del menú_____________________"
+echo ""
+
+
+read -p "Dime que opción quieres elegir. Para ello, ingresa un número del 1 al 5.  " menu
+
+if [ "$menu" -eq 1 ]; then
+
+    read -p "Cómo se llama el directorio a crear? " directory
+    mkdir "$directory"
+    echo "El directorio \"$directory\" se ha creado."
+
+elif [ "$menu" -eq 2 ]; then
+
+    read -p "Cómo se llama el fichero a crear? " file
+    touch "$file"
+    echo "El fichero \"$file\" se ha creado."
+
+elif [ "$menu" -eq 3 ]; then
+
+    read -p "Cómo se llama el fichero a borrar? " file
+    rm -i "$file"
+    echo "El fichero \"$file\" se ha borrado."
+
+elif [ "$menu" -eq 4 ]; then
+
+    read -p "Cómo se llama el directorio a borrar? " directory
+    rm -ri "$directory"
+    echo "El directorio \"$directory\" se ha borrado."
+
+elif ["$menu" -eq "Salir"]; then
+    echo "¡Hasta luego! "
+    exit 0
+
+else
