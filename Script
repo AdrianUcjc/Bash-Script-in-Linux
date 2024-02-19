@@ -37,7 +37,13 @@ while true; do
                         ;;
                 5)
                         read -p "Tienes instalados los paquetes necesarios?" $6
-                        if []
+                        if [ "$entrada_usuario" = "mi_valor" ]; then
+                                echo "Eco"
+                        else
+                            echo "Hola"
+                        fi
+                        ;;
+
         esac
 done
 
