@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# Mostrar el menú
+echo "Menú:"
+echo "1. Crear directorio"
+echo "2. Crear fichero"
+echo "3. Borrar fichero"
+echo "4. Borrar directorio"
+
+# Solicitar al usuario que ingrese una opción
+read -p "Seleccione una opción (1-4): " opcion
+
+# Evaluar la opción ingresada
+if [ "$opcion" -eq 1 ]; then
+    # Opción 1: Crear directorio
+    read -p "Ingrese el nombre del directorio a crear: " directorio
+    mkdir "$directorio"
+    echo "Directorio \"$directorio\" creado."
+elif [ "$opcion" -eq 2 ]; then
+    # Opción 2: Crear fichero
+    read -p "Ingrese el nombre del fichero a crear: " fichero
+    touch "$fichero"
+    echo "Fichero \"$fichero\" creado."
+elif [ "$opcion" -eq 3 ]; then
+    # Opción 3: Borrar fichero
+    read -p "Ingrese el nombre del fichero a borrar: " fichero
+    rm -i "$fichero"
+    echo "Fichero \"$fichero\" borrado."
+elif [ "$opcion" -eq 4 ]; then
+    # Opción 4: Borrar directorio
+    read -p "Ingrese el nombre del directorio a borrar: " directorio
+    rm -ri "$directorio"
+    echo "Directorio \"$directorio\" borrado."
+else
+    # Opción inválida
+    echo "Opción inválida. Por favor, seleccione una opción válida (1-4)."
+fi
